@@ -1,5 +1,6 @@
 package;
 
+import com.foed.EEdgeBehavior;
 import com.foed.SteeredVehicle;
 import com.foed.Vector2D;
 
@@ -16,7 +17,8 @@ class WanderTest extends Sprite
 	{
 		super();
 		_vehicle=new SteeredVehicle();
-		_vehicle.position=new Vector2D(200, 200);
+		_vehicle.position = new Vector2D(200, 200);
+		_vehicle.edgeBehavior = EEdgeBehavior.WRAP;
 		addChild(_vehicle);
 		
 		addEventListener(Event.ENTER_FRAME, onEnterFrame);

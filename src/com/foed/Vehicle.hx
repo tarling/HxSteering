@@ -7,16 +7,11 @@ import flash.display.Sprite;
  */
 class Vehicle extends Sprite
 {
-	//public var y(default, set_y):Float;
- 	//public var x(default, set_x):Float;
- 
 	public var position(get_position, set_position):Vector2D;
  	public var edgeBehavior:EEdgeBehavior;
  	public var mass:Float=1.0;
 	public var maxSpeed:Float=10;
 	public var velocity:Vector2D;
-	
-	//private var _position:Vector2D;
 	
 	/**
 	 * Constructor.
@@ -25,7 +20,8 @@ class Vehicle extends Sprite
 	{
 		super();
 		//_position=new Vector2D();
-		velocity=new Vector2D();
+		velocity = new Vector2D();
+		edgeBehavior = EEdgeBehavior.WRAP;
 		draw();
 	}
 	
@@ -78,27 +74,29 @@ class Vehicle extends Sprite
 	{
 		if(stage !=null)
 		{
-			if(position.x>stage.stageWidth)
+			var p:Vector2D = position;
+			if(p.x>stage.stageWidth)
 			{
-				position.x=stage.stageWidth;
+				p.x=stage.stageWidth;
 				velocity.x *=-1;
 			}
-			else if(position.x<0)
+			else if(p.x<0)
 			{
-				position.x=0;
+				p.x=0;
 				velocity.x *=-1;
 			}
 			
-			if(position.y>stage.stageHeight)
+			if(p.y>stage.stageHeight)
 			{
-				position.y=stage.stageHeight;
+				p.y=stage.stageHeight;
 				velocity.y *=-1;
 			}
-			else if(position.y<0)
+			else if(p.y<0)
 			{
-				position.y=0;
+				p.y=0;
 				velocity.y *=-1;
 			}
+			position = p;
 		}
 	}
 	
@@ -107,12 +105,15 @@ class Vehicle extends Sprite
 	 */
 	private function wrap():Void
 	{
+		var p:Vector2D = position;
 		if(stage !=null)
 		{
-			if(position.x>stage.stageWidth)position.x=0;
-			if(position.x<0)position.x=stage.stageWidth;
-			if(position.y>stage.stageHeight)position.y=0;
-			if(position.y<0)position.y=stage.stageHeight;
+			if(p.x>stage.stageWidth)p.x=0;
+			if(p.x<0)p.x=stage.stageWidth;
+			if(p.y>stage.stageHeight)p.y=0;
+			if (p.y < 0) p.y = stage.stageHeight;
+			
+			position = p;
 		}
 	}
 	
@@ -130,25 +131,5 @@ class Vehicle extends Sprite
 	{
 		return new Vector2D(x,y);
 	}
-	
-	/**
-	 * Sets x position of character. Overrides Sprite.x to set Internal Vector2D position as well.
-	 */
-	/*private function set_x(value:Float):Float
-	{
-		super.x=value;
-		position.x = x;
-		return value;
-	}*/
-	
-	/**
-	 * Sets y position of character. Overrides Sprite.y to set Internal Vector2D position as well.
-	 */
-	/*private function set_y(value:Float):Float
-	{
-		super.y=value;
-		_position.y = y;
-		return value;
-	}*/
 	
 }
