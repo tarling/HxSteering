@@ -1,4 +1,6 @@
-package com.foed;
+package steering.behaviors;
+import steering.core.SteeredVehicle;
+import steering.core.Vector2D;
 
 /**
  * ...

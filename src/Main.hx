@@ -3,6 +3,20 @@ package;
 import flash.display.Sprite;
 import flash.events.Event;
 import flash.Lib;
+import steering.tests.ArriveTest;
+import steering.tests.AvoidTest;
+import steering.tests.FleeTest;
+import steering.tests.FlockTest;
+import steering.tests.PathTest;
+import steering.tests.PursueEvadeTest;
+import steering.tests.PursueTest;
+import steering.tests.SeekFleeTest1;
+import steering.tests.SeekFleeTest2;
+import steering.tests.SeekTest;
+import steering.tests.Steering;
+import steering.tests.Steering2;
+import steering.tests.VehicleTest;
+import steering.tests.WanderTest;
 
 /**
  * ...

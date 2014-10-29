@@ -1,6 +1,7 @@
-package com.foed;
+package steering;
 
 import flash.display.Sprite;
+import steering.core.Vector2D;
 
 class Circle extends Sprite
 {

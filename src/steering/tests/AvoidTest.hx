@@ -1,14 +1,11 @@
-package;
+package steering.tests;
 
-import com.foed.AvoidBehavior;
-import com.foed.Circle;
-import com.foed.EEdgeBehavior;
-import com.foed.SteeredVehicle;
-import com.foed.Vehicle;
-import com.foed.WanderBehavior;
-import flash.display.Sprite;
 import flash.events.Event;
-import flash.Lib;
+import steering.behaviors.AvoidBehavior;
+import steering.behaviors.WanderBehavior;
+import steering.Circle;
+import steering.core.EEdgeBehavior;
+import steering.core.SteeredVehicle;
 
 
 class AvoidTest extends InitedSprite

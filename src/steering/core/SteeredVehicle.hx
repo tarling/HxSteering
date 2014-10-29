@@ -1,6 +1,7 @@
-package com.foed;
+package steering.core;
 
 import flash.display.Sprite;
+import steering.behaviors.IBehavior;
 
 class SteeredVehicle extends Vehicle
 {

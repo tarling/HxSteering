@@ -1,4 +1,4 @@
-package com.foed;
+package steering.behaviors;
 
 /**
  * @author 

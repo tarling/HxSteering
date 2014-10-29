@@ -1,4 +1,5 @@
-package ;
+package steering.tests;
+
 import flash.display.Sprite;
 import flash.events.Event;
 

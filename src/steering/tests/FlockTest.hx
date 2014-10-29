@@ -1,10 +1,10 @@
-package;
+package steering.tests;
 
-import com.foed.EEdgeBehavior;
-import com.foed.FlockBehavior;
-import com.foed.SteeredVehicle;
-import com.foed.Vector2D;
 import flash.events.Event;
+import steering.behaviors.FlockBehavior;
+import steering.core.EEdgeBehavior;
+import steering.core.SteeredVehicle;
+import steering.core.Vector2D;
 
 
 class FlockTest extends InitedSprite

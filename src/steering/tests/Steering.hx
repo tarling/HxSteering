@@ -1,12 +1,11 @@
-package;
-
-import com.foed.Vector2D;
+package steering.tests;
 
 import flash.display.Sprite;
 import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 import flash.events.MouseEvent;
 import flash.text.TextField;
+import steering.core.Vector2D;
 
 //[SWF(backgroundColor=0xffffff)]
 class Steering extends Sprite
@@ -15,8 +14,6 @@ class Steering extends Sprite
 	private var sB:Sprite;
 	private var sC:Sprite;
 	private var tf:TextField;
-	
-	
 	
 	public function new()
 	{

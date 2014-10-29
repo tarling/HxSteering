@@ -1,4 +1,4 @@
-﻿package com.foed;
+﻿package steering.core;
 
 	import flash.display.Graphics;
 	

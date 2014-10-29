@@ -1,12 +1,11 @@
-package;
-
-import com.foed.Vector2D;
-import com.foed.Vehicle;
+package steering.tests;
 
 import flash.display.Sprite;
 import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 import flash.events.Event;
+import steering.core.Vector2D;
+import steering.core.Vehicle;
 
 class VehicleTest extends Sprite
 {

@@ -1,14 +1,13 @@
-package;
-
-import com.foed.EEdgeBehavior;
-import com.foed.SteeredVehicle;
-import com.foed.Vector2D;
-import com.foed.Vehicle;
+package steering.tests;
 
 import flash.display.Sprite;
 import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 import flash.events.Event;
+import steering.core.EEdgeBehavior;
+import steering.core.SteeredVehicle;
+import steering.core.Vector2D;
+import steering.core.Vehicle;
 
 class PursueTest extends Sprite
 {

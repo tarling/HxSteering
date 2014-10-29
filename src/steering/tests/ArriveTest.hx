@@ -1,12 +1,9 @@
-package;
-
-import com.foed.SteeredVehicle;
-import com.foed.Vector2D;
+package steering.tests;
 
 import flash.display.Sprite;
-import flash.display.StageAlign;
-import flash.display.StageScaleMode;
 import flash.events.Event;
+import steering.core.SteeredVehicle;
+import steering.core.Vector2D;
 
 class ArriveTest extends Sprite
 {
