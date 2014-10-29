@@ -1,5 +1,6 @@
 package;
 
+import com.foed.FollowPathBehavior;
 import com.foed.SteeredVehicle;
 import com.foed.Vector2D;
 import flash.events.Event;
@@ -20,7 +21,12 @@ class PathTest extends InitedSprite
 		_vehicle=new SteeredVehicle();
 		addChild(_vehicle);
 		
-		_path=new Array();
+		_path = new Array();
+		
+		var follow:FollowPathBehavior = new FollowPathBehavior(_vehicle);
+		follow.loop = true;
+		follow.path = _path;
+		_vehicle.addBehavior(follow);
 		
 		stage.addEventListener(MouseEvent.CLICK, onClick);
 		addEventListener(Event.ENTER_FRAME, onEnterFrame);
@@ -28,7 +34,6 @@ class PathTest extends InitedSprite
 	
 	private function onEnterFrame(event:Event):Void
 	{
-		_vehicle.followPath(_path, true);
 		_vehicle.update();
 	}
 	

@@ -10,7 +10,7 @@ import flash.Lib;
  */
 class Main extends Sprite 
 {
-	
+	//
 	public function new():Void 
 	{
 		super();
@@ -19,9 +19,9 @@ class Main extends Sprite
 	static function main():Void {
 		
 		//Lib.current.addChild(new ArriveTest());
-		Lib.current.addChild(new AvoidTest());
+		//Lib.current.addChild(new AvoidTest());
 		//Lib.current.addChild(new FleeTest());
-		//Lib.current.addChild(new FlockTest());
+		Lib.current.addChild(new FlockTest());
 		//Lib.current.addChild(new PathTest());
 		//Lib.current.addChild(new PursueEvadeTest());
 		//Lib.current.addChild(new PursueTest());

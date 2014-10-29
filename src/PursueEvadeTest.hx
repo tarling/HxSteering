@@ -3,12 +3,8 @@ package;
 import com.foed.EEdgeBehavior;
 import com.foed.SteeredVehicle;
 import com.foed.Vector2D;
-import com.foed.Vehicle;
-
-import flash.display.Sprite;
-import flash.display.StageAlign;
-import flash.display.StageScaleMode;
 import flash.events.Event;
+
 
 class PursueEvadeTest extends InitedSprite
 {

@@ -13,8 +13,10 @@ class Circle extends Sprite
 	{
 		super();
 		this.radius=radius;
-		graphics.lineStyle(0, color);
+		//graphics.lineStyle(0, color);
+		graphics.beginFill(color);
 		graphics.drawCircle(0, 0, radius);
+		graphics.endFill();
 	}
 	
 	private function get_position():Vector2D

@@ -1,12 +1,11 @@
 package;
 
-import com.foed.Vector2D;
 import com.foed.SteeredVehicle;
-
+import com.foed.Vector2D;
+import com.foed.WanderBehavior;
 import flash.display.Sprite;
-import flash.display.StageAlign;
-import flash.display.StageScaleMode;
 import flash.events.Event;
+
 
 class Steering2 extends Sprite
 {
@@ -24,6 +23,8 @@ class Steering2 extends Sprite
 		_small.position=new Vector2D(300, 400);
 		addChild(_small);
 		
+		_small.addBehavior(new WanderBehavior(_small));
+		
 		_medium=new SteeredVehicle();
 		_medium.position=new Vector2D(100, 100);
 		addChild(_medium);
@@ -39,7 +40,6 @@ class Steering2 extends Sprite
 	
 	private function onEnterFrame(event:Event):Void
 	{
-		_small.wander();
 		_medium.seek(_small.position);
 		_small.update();
 		_medium.update();
