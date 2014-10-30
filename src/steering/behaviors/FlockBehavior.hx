@@ -24,9 +24,8 @@ class FlockBehavior implements IBehavior
 		var averageVelocity:Vector2D=vehicle.velocity.clone();
 		var averagePosition:Vector2D=new Vector2D();
 		var inSightCount:Int=0;
-		for(i in 0...vehicles.length)
+		for(other in vehicles)
 		{
-			var other:Vehicle=vehicles[i];
 			if(other !=vehicle && vehicle.inSight(other))
 			{
 				averageVelocity=averageVelocity.add(other.velocity);

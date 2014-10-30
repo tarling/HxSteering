@@ -127,7 +127,8 @@
 		 */
 		public function truncate(max:Float):Vector2D
 		{
-			length=Math.min(max, length);
+			var l:Float = length;
+			if (l > max) length=Math.min(max, l);
 			return this;
 		}
 		

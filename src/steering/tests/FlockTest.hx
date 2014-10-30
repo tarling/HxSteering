@@ -18,12 +18,13 @@ class FlockTest extends InitedSprite
 	
 	override function init():Void { 
 		_vehicles=new Array();
-		for(i in 0...30)
+		for(i in 0...100)
 		{
 			var vehicle:SteeredVehicle=new SteeredVehicle();
 			vehicle.position=new Vector2D(Math.random()* stage.stageWidth, Math.random()* stage.stageHeight);
 			vehicle.velocity=new Vector2D(Math.random()* 20 - 10, Math.random()* 20 - 10);
-			vehicle.edgeBehavior=EEdgeBehavior.BOUNCE;
+			vehicle.edgeBehavior = EEdgeBehavior.BOUNCE;
+			vehicle.inSightDist = 200;
 			addChild(vehicle);
 			
 			_vehicles.push(vehicle);
