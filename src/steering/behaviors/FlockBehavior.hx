@@ -26,12 +26,16 @@ class FlockBehavior implements IBehavior
 		var inSightCount:Int=0;
 		for(other in vehicles)
 		{
-			if(other !=vehicle && vehicle.inSight(other))
+			if (other != vehicle)
 			{
-				averageVelocity=averageVelocity.add(other.velocity);
-				averagePosition=averagePosition.add(other.position);
-				if(vehicle.tooClose(other))vehicle.flee(other.position);
-				inSightCount++;
+				var pos:Vector2D = other.position;
+				if (vehicle.inSight(pos))
+				{
+					averageVelocity=averageVelocity.add(other.velocity);
+					averagePosition=averagePosition.add(pos);
+					if(vehicle.tooClose(pos))vehicle.flee(pos);
+					inSightCount++;
+				}
 			}
 		}
 		if(inSightCount>0)

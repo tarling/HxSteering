@@ -1,6 +1,5 @@
 package steering.core;
 
-import flash.display.Sprite;
 import steering.behaviors.IBehavior;
 
 class SteeredVehicle extends Vehicle
@@ -90,19 +89,19 @@ class SteeredVehicle extends Vehicle
 		flee(predictedTarget);
 	}
 	
-	public function inSight(vehicle:Vehicle):Bool		
+	public function inSight(other:Vector2D):Bool		
 	{
-		if(position.dist(vehicle.position)>inSightDist)return false;
+		if(position.dist(other)>inSightDist)return false;
 		var heading:Vector2D=velocity.clone().normalize();
-		var difference:Vector2D=vehicle.position.subtract(position);
+		var difference:Vector2D=other.subtract(position);
 		var dotProd:Float=difference.dotProd(heading);
 		
 		if(dotProd<0)return false;
 		return true;
 	}
 	
-	public function tooClose(vehicle:Vehicle):Bool
+	public function tooClose(other:Vector2D):Bool
 	{
-		return position.dist(vehicle.position)<tooCloseDist;
+		return position.dist(other)<tooCloseDist;
 	}
 }

@@ -24,7 +24,8 @@ class FlockTest extends InitedSprite
 			vehicle.position=new Vector2D(Math.random()* stage.stageWidth, Math.random()* stage.stageHeight);
 			vehicle.velocity=new Vector2D(Math.random()* 20 - 10, Math.random()* 20 - 10);
 			vehicle.edgeBehavior = EEdgeBehavior.BOUNCE;
-			vehicle.inSightDist = 200;
+			vehicle.scaleX = vehicle.scaleY = 0.5;
+			//vehicle.inSightDist = 100;
 			addChild(vehicle);
 			
 			_vehicles.push(vehicle);
